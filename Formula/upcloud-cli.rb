@@ -5,25 +5,25 @@
 class UpcloudCli < Formula
   desc "CLI tool for managing UpCloud services."
   homepage "https://upcloud.com/"
-  version "0.6.4"
+  version "0.6.0"
   license "MIT"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/kaminek/upcloud-cli/releases/download/v0.6.4/upcloud-cli_0.6.4_darwin_x86_64.tar.gz"
-    sha256 "ee6c28a00ab7d1755d6d523776c50c8fa499d2f6011f648f8aa19d4c4648122b"
+    url "https://github.com/UpCloudLtd/upcloud-cli/releases/download/v0.6.0/upcloud-cli_0.6.0_darwin_x86_64.tar.gz"
+    sha256 "12b334c0b36b834277c7c65a6aefcd9fa8a03377ab7711ae31baf79b09551f72"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/kaminek/upcloud-cli/releases/download/v0.6.4/upcloud-cli_0.6.4_darwin_arm64.tar.gz"
-    sha256 "670ac5d6358aa19b5a61ecfa2b03d8a8884fd9064e3f9cb1ecdd183440e4be96"
+    url "https://github.com/UpCloudLtd/upcloud-cli/releases/download/v0.6.0/upcloud-cli_0.6.0_darwin_arm64.tar.gz"
+    sha256 "d2d52e9b5a864fe95659c547e25c176b1af79886c80ed5ad49e857785542ef75"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/kaminek/upcloud-cli/releases/download/v0.6.4/upcloud-cli_0.6.4_linux_x86_64.tar.gz"
-    sha256 "fa6c4be83cf99286434b9aba6b316a94b1dd25a8f6587f36a209fc904e5b63a5"
+    url "https://github.com/UpCloudLtd/upcloud-cli/releases/download/v0.6.0/upcloud-cli_0.6.0_linux_x86_64.tar.gz"
+    sha256 "7f9eb1c0188216d78132e89f02ce3e0305df2ed7b9c7a7809a1dc53d6e2a25ab"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/kaminek/upcloud-cli/releases/download/v0.6.4/upcloud-cli_0.6.4_linux_arm64.tar.gz"
-    sha256 "77f797eb221bf1c095bfffaf201700ca3ac4913e7107da498f9635df4d381177"
+    url "https://github.com/UpCloudLtd/upcloud-cli/releases/download/v0.6.0/upcloud-cli_0.6.0_linux_arm64.tar.gz"
+    sha256 "8898026130cd2585aa844550c8a967819a5a085422bc4b1e45302e5a3ec43af7"
   end
 
   head "https://github.com/UpCloudLtd/upcloud-cli.git"
