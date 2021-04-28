@@ -11,19 +11,19 @@ class UpcloudCli < Formula
 
   if OS.mac? && Hardware::CPU.intel?
     url "https://github.com/UpCloudLtd/upcloud-cli/releases/download/v1.0.0/upcloud-cli_1.0.0_darwin_x86_64.tar.gz"
-    sha256 "bc72e0526317c1b0ada5ddd3d0bc2dd10953ef1f97b4dec127fdc261f4dab5ed"
+    sha256 "7a23ce989a371a91fdbd1639e876488177bc2773dc82550de82386a13ad7af20"
   end
   if OS.mac? && Hardware::CPU.arm?
     url "https://github.com/UpCloudLtd/upcloud-cli/releases/download/v1.0.0/upcloud-cli_1.0.0_darwin_arm64.tar.gz"
-    sha256 "ce5ebc79403a13ec3bf4188b974c89e802c734f7e547c734212e2ee9a0753c75"
+    sha256 "bae2788442b8395bb8474668c6022b180c4cc1ff22edfacad89ad68f62d666b0"
   end
   if OS.linux? && Hardware::CPU.intel?
     url "https://github.com/UpCloudLtd/upcloud-cli/releases/download/v1.0.0/upcloud-cli_1.0.0_linux_x86_64.tar.gz"
-    sha256 "c93b4d65e9527d713c5c7e68fef8f9691403fb60acbbac41f432c65ef6a104c2"
+    sha256 "6b5be7ca7f0eb8e7146477c42c06d80a2c1c55ad4d51e95d46073653da3da183"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
     url "https://github.com/UpCloudLtd/upcloud-cli/releases/download/v1.0.0/upcloud-cli_1.0.0_linux_arm64.tar.gz"
-    sha256 "28f8bae19174ebd9755b815a054cb3563be98970a72b8593d7d8f3bb0878cc4c"
+    sha256 "c570476d75e9a159b89d11555d5d805dcabbf0d1ad15568d551c30d4529eb529"
   end
 
   head "https://github.com/UpCloudLtd/upcloud-cli.git"
