@@ -5,25 +5,30 @@
 class UpcloudCli < Formula
   desc "CLI tool for managing UpCloud services."
   homepage "https://upcloud.com/"
-  version "1.0.0"
+  version "1.1.0"
   license "MIT"
   bottle :unneeded
 
-  if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/UpCloudLtd/upcloud-cli/releases/download/v1.0.0/upcloud-cli_1.0.0_darwin_x86_64.tar.gz"
-    sha256 "7a23ce989a371a91fdbd1639e876488177bc2773dc82550de82386a13ad7af20"
+  on_macos do
+    if Hardware::CPU.intel?
+      url "https://github.com/UpCloudLtd/upcloud-cli/releases/download/v1.1.0/upcloud-cli_1.1.0_darwin_x86_64.tar.gz"
+      sha256 "e662c9bb8f515acc477c6f9424a0e759cd871915a3d018b74a61daae2e60ae35"
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/UpCloudLtd/upcloud-cli/releases/download/v1.1.0/upcloud-cli_1.1.0_darwin_arm64.tar.gz"
+      sha256 "b4675cd06c2dd7757d96530bb5dcae39c0fd91071d3fdcc8240bbe9cf86626de"
+    end
   end
-  if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/UpCloudLtd/upcloud-cli/releases/download/v1.0.0/upcloud-cli_1.0.0_darwin_arm64.tar.gz"
-    sha256 "bae2788442b8395bb8474668c6022b180c4cc1ff22edfacad89ad68f62d666b0"
-  end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/UpCloudLtd/upcloud-cli/releases/download/v1.0.0/upcloud-cli_1.0.0_linux_x86_64.tar.gz"
-    sha256 "6b5be7ca7f0eb8e7146477c42c06d80a2c1c55ad4d51e95d46073653da3da183"
-  end
-  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/UpCloudLtd/upcloud-cli/releases/download/v1.0.0/upcloud-cli_1.0.0_linux_arm64.tar.gz"
-    sha256 "c570476d75e9a159b89d11555d5d805dcabbf0d1ad15568d551c30d4529eb529"
+
+  on_linux do
+    if Hardware::CPU.intel?
+      url "https://github.com/UpCloudLtd/upcloud-cli/releases/download/v1.1.0/upcloud-cli_1.1.0_linux_x86_64.tar.gz"
+      sha256 "78b8acdf27d6b1c306b9f364645b742f7810fddcc9301ba76db23be9414b5f5e"
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/UpCloudLtd/upcloud-cli/releases/download/v1.1.0/upcloud-cli_1.1.0_linux_arm64.tar.gz"
+      sha256 "1ad3390f7be516942ebfc280af8573204288070085e8343c0a562e89d0dbdc9f"
+    end
   end
 
   head "https://github.com/UpCloudLtd/upcloud-cli.git"
