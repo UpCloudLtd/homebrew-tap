@@ -5,15 +5,15 @@
 class UpcloudCli < Formula
   desc "CLI tool for managing UpCloud services."
   homepage "https://upcloud.com/"
-  version "3.19.0"
+  version "3.19.1"
   license "MIT"
 
   depends_on "bash-completion" => :optional
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/UpCloudLtd/upcloud-cli/releases/download/v3.19.0/upcloud-cli_3.19.0_darwin_x86_64.tar.gz"
-      sha256 "95251b168b3b67735c469b44df5b5e71160b5d9dabdbdbed2a641867fd504d43"
+      url "https://github.com/UpCloudLtd/upcloud-cli/releases/download/v3.19.1/upcloud-cli_3.19.1_darwin_x86_64.tar.gz"
+      sha256 "1649f228c5a1ba7dce12d6a30fbc62f262253ea2db221296ff36c87ad7ecc704"
 
       def install
         bin.install "upctl"
@@ -21,8 +21,8 @@ class UpcloudCli < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/UpCloudLtd/upcloud-cli/releases/download/v3.19.0/upcloud-cli_3.19.0_darwin_arm64.tar.gz"
-      sha256 "eb9a4d5b2be8b76f510b3adf8f8001a14046406244215cf854ee2d0122b5a5fd"
+      url "https://github.com/UpCloudLtd/upcloud-cli/releases/download/v3.19.1/upcloud-cli_3.19.1_darwin_arm64.tar.gz"
+      sha256 "3e1b9455502c5f742cf5c7390b25c8a45980f5ae37fb785769f08d34192a7e52"
 
       def install
         bin.install "upctl"
@@ -34,8 +34,8 @@ class UpcloudCli < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/UpCloudLtd/upcloud-cli/releases/download/v3.19.0/upcloud-cli_3.19.0_linux_x86_64.tar.gz"
-        sha256 "f4e9d8707740afbbdaa497da8aea62b2f9a5d027fd9629c58487166242ca4b06"
+        url "https://github.com/UpCloudLtd/upcloud-cli/releases/download/v3.19.1/upcloud-cli_3.19.1_linux_x86_64.tar.gz"
+        sha256 "12740c5f74796b4e9c6c57fbada1cb1bec5ec804768caab8f592a51b464e3359"
 
         def install
           bin.install "upctl"
@@ -45,8 +45,8 @@ class UpcloudCli < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/UpCloudLtd/upcloud-cli/releases/download/v3.19.0/upcloud-cli_3.19.0_linux_arm64.tar.gz"
-        sha256 "1d19cc218d2b47d97e49ffa427499e62f536a9729fad95709817c2415320c59d"
+        url "https://github.com/UpCloudLtd/upcloud-cli/releases/download/v3.19.1/upcloud-cli_3.19.1_linux_arm64.tar.gz"
+        sha256 "754cdbf62aebbe022617655e5f09097e91a7289e185f0dbaeb1216d8255912ad"
 
         def install
           bin.install "upctl"
